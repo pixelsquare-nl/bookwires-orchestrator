@@ -4,7 +4,7 @@ import pytest
 def test_parse_md_nofound():
     parser = MarkdownParser()
     with pytest.raises(FileNotFoundError):
-        parser.parse('notfound.txt')
+        parser.parse(pathlib.Path('notfound.txt'))
 
 
 def test_parse_found(samples_path: pathlib.Path):
